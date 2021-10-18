@@ -1,4 +1,4 @@
-namespace ControlCenterServer.Data
+namespace ControlCenterServer.Data.Models
 {
     public class WeatherForecast
     {

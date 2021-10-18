@@ -1,5 +1,6 @@
-using ControlCenterServer.Auth;
+using ControlCenterServer.Areas.Identity;
 using ControlCenterServer.Data;
+using ControlCenterServer.Data.Service;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
