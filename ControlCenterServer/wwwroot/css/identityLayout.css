@@ -1,0 +1,100 @@
+
+body {
+    background: url(/images/Meteor.svg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background: red;
+}
+
+    header > .navbar,
+    footer.footer {
+        /*background: transparent;*/
+        background: red;
+
+    }
+
+footer.footer {
+    overflow: unset;
+}
+
+#identity_layout_container,
+identity_layout_container main {
+/*    width: auto;
+    height: auto;*/
+}
+
+#identity_layout_container .card {
+    border-radius: 7px;
+    padding-bottom: 12px;
+    border: 0px;
+    border: 2px solid red;
+}
+
+
+#identity_layout_container .card,
+#identity_layout_container .card-header,
+#identity_layout_container .card-body,
+#identity_layout_container .card-footer {
+    background: #FFF;
+}
+
+#identity_layout_container .card-header,
+#identity_layout_container .card-body,
+#identity_layout_container .card-footer {
+    border: 0;
+}
+
+#identity_layout_container div.form-floating {
+    flex: 1 1 auto;
+}
+
+#identity_layout_container .form-control {
+    border: none;
+    border-bottom: 1px solid #CCC;
+    border-radius: 0;
+}
+
+    #identity_layout_container .form-control:focus {
+        box-shadow: none;
+    }
+
+#identity_layout_container .form-floating label {
+    color: #CCC;
+}
+
+#identity_layout_container .form-floating > .form-control:focus ~ label {
+    color: #222;
+}
+
+#identity_layout_container .form-check-input:checked,
+#identity_layout_container button[type="submit"] {
+    background-color: #6C63FF;
+    border-color: #6C63FF;
+}
+
+#identity_layout_container .input-group-text {
+    background-color: #FFFF;
+    border: 0;
+    border-bottom: 1px solid #CCC;
+    border-radius: 0;
+}
+
+    #identity_layout_container .input-group-text i {
+        opacity: 0.5;
+        font-size: 1.1rem;
+    }
+
+#identity_layout_container a {
+    color: #6C63FF;
+}
+
+#identity_layout_container img {
+    max-width: 100%;
+    border-radius: 0.2857rem;
+}
