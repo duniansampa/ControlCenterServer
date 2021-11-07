@@ -8,25 +8,27 @@ body {
     height: 100vh;
 }
 
-header {
+header,
+footer {
     background: red;
+    height: 4rem;
 }
 
     header > .navbar,
     footer.footer {
         /*background: transparent;*/
         background: red;
-
     }
 
-footer.footer {
-    overflow: unset;
+#identity_layout_container {
+    height: calc(100% - 8rem);
 }
 
 #identity_layout_container,
-identity_layout_container main {
-/*    width: auto;
-    height: auto;*/
+#identity_layout_container main,
+#identity_layout_container main .row {
+    /*   width: 100%;
+    height: 100%;*/
 }
 
 #identity_layout_container .card {
