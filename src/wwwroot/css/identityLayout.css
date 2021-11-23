@@ -28,8 +28,6 @@ footer {
 }
 
     #identity_layout_container .card {
-        /*border: none;*/
-        /*border-radius: 15px;*/
         padding-bottom: 12px;
     }
 
@@ -43,27 +41,34 @@ footer {
         background: #FFF;
     }
 
-#identity_layout_container div.form-floating {
-    flex: 1 1 auto;
-}
-
-#identity_layout_container .form-control {
-    border: none;
-    border-bottom: 1px solid #CCC;
-    border-radius: 0;
-}
-
-    #identity_layout_container .form-control:focus {
-        box-shadow: none;
+    #identity_layout_container div.form-floating {
+        flex: 1 1 auto;
     }
 
-#identity_layout_container .form-floating label {
-    color: #CCC;
-}
+    #identity_layout_container .form-control {
+        border: none;
+        border-bottom: 1px solid #CCC;
+        border-radius: 0;
+    }
 
-#identity_layout_container .form-floating > .form-control:focus ~ label {
-    color: #222;
-}
+        #identity_layout_container .form-control:focus {
+            box-shadow: none;
+        }
+
+    #identity_layout_container .form-floating label {
+        color: #CCC;
+    }
+
+    #identity_layout_container .form-floating > .form-control:focus ~ label {
+        color: #222;
+    }
+    #identity_layout_container #account_container a {
+        color: #6c757d;
+    }
+
+    #identity_layout_container #account_container a:hover {
+       color: black;
+    }
 
 #identity_layout_container .form-check-input:checked,
 #identity_layout_container button[type="submit"] {
@@ -83,11 +88,37 @@ footer {
         font-size: 1.1rem;
     }
 
-#identity_layout_container a {
-    color: #6C63FF;
-}
-
 #identity_layout_container img {
     max-width: 100%;
     border-radius: 0.2857rem;
+}
+
+.navbar-brand img {
+    height: 2rem;
+}
+
+.navbar-brand span, #footer span {
+    color: white;
+    font-weight: 900;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+#footer {
+    color: white;
+}
+
+#register, #login {
+    margin-right: 10px;
+}
+
+.card-header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6rem;
 }

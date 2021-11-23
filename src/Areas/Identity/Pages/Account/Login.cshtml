@@ -10,8 +10,7 @@
         <div class="col col-md-7">
             <div class="card text-center">
                 <div class="card-header">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-title">Log in</div>
+                    <div class="card-title display-6 text-dark">Log in</div>
                 </div>
                 <div class="card-body">
                     <form id="account" method="post">
@@ -40,7 +39,7 @@
                         </div>
                         <div>
                             <div class="checkbox">
-                                <label asp-for="Input.RememberMe" class="form-label">
+                                <label id="rememder-me" asp-for="Input.RememberMe" class="form-label text-muted">
                                     <input class="form-check-input" asp-for="Input.RememberMe" />
                                     @Html.DisplayNameFor(m => m.Input.RememberMe)
                                 </label>
@@ -53,26 +52,16 @@
                         <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Entrar</button>
                     </div>
 
-                    <div class="Container mb-3">
+                    <div class="container mb-3">
                         <div class="row">
                             <div class="col-6">
-                                <a id="forgot-password" asp-page="./ForgotPassword" class="h6">Forgot your password?</a>
+                                <a id="forgot-password" class="btn btn-link" asp-page="./ForgotPassword">Forgot your password?</a>
                             </div>
                             <div class="col-6">
-                                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="h6">
-                                    Register as a new
-                                    user
+                                <a id="resend-confirmation" class="btn btn-link" asp-page="./ResendEmailConfirmation">
+                                    Resend email confirmation
                                 </a>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">
-                                    Resend email
-                                    confirmation
-                                </a>
-                            </div>
-                            <div class="col-6"></div>
                         </div>
                     </div>
                 </div>
