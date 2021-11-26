@@ -1,0 +1,61 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div calss="container" id="account_container">
+    <div class="row h-100 w-100 justify-content-center align-items-center">
+        <div class="col col-md-7">
+            <div class="card text-center">
+                <div class="card-header">
+                    <div class="card-title display-6 text-dark">Create a new account.</div>
+                </div>
+                <div class="card-body">
+                    <form id="account" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="input-group mb-5">
+                            <span class="input-group-text" id="inputGroup-username">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <div class="form-floating">
+                                <input asp-for="Input.Email" class="form-control" autocomplete="username" placeholder="." aria-required="true" />
+                                <label asp-for="Input.Email">Nome de Usuário ou email</label>
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-password">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <div class="form-floating">
+                                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" placeholder="-" aria-required="true" />
+                                <label asp-for="Input.Password">Senha</label>
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-password">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <div class="form-floating">
+                                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" placeholder="-" aria-required="true" />
+                                <label asp-for="Input.ConfirmPassword">Confirmar senha</label>
+                                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="mb-3">
+                        <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
