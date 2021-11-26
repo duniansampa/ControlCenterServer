@@ -12,7 +12,7 @@
                     <div class="card-title display-6 text-dark">Create a new account.</div>
                 </div>
                 <div class="card-body">
-                    <form id="account" method="post">
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="input-group mb-5">
                             <span class="input-group-text" id="inputGroup-username">
