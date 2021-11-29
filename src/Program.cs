@@ -1,9 +1,11 @@
+using BlazorStrap;
 using ControlCenterServer.Areas.Identity;
 using ControlCenterServer.Data;
 using ControlCenterServer.Data.Service;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +21,15 @@ builder.Services.AddRazorPages(options => { options.RootDirectory = "/Host"; });
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+//Radzen
+builder.Services.AddScoped<DialogService>();
+builder.Services.AddScoped<NotificationService>();
+builder.Services.AddScoped<TooltipService>();
+builder.Services.AddScoped<ContextMenuService>();
+
+//BlazorStrap
+builder.Services.AddBootstrapCss();
 
 var app = builder.Build();
 

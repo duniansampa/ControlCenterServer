@@ -1,4 +1,5 @@
 ﻿@page "/counter"
+@using BlazorStrap
 
 <PageTitle>Counter</PageTitle>
 
@@ -7,7 +8,7 @@
 <p role="status">Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
+<BSButton Color="Color.Primary" Size="Size.Large">Large Button</BSButton>
 @code {
     private int currentCount = 0;
 

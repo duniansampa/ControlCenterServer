@@ -12,6 +12,9 @@
     <link href="css/site.css" rel="stylesheet" />
     <link href="ControlCenterServer.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+
+    @*Radzen*@
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/default-base.css">
 </head>
 <body>
     @RenderBody()
@@ -28,5 +31,12 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
+
+    @*Radzen*@
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+
+    @*BlazorStrap*@
+    <script src="_content/BlazorStrap/blazorStrap.js"></script>
+
 </body>
 </html>
