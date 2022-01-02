@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Diagnostics;
 
 namespace ControlCenterServer.Pages
 {
@@ -21,7 +20,7 @@ namespace ControlCenterServer.Pages
 
         public void OnGet()
         {
-            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            RequestId = System.Diagnostics.Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
     }
 }

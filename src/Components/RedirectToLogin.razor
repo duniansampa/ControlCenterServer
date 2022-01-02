@@ -1,0 +1,18 @@
+﻿@inject NavigationManager navigation
+
+@code {
+    protected override void OnInitialized()
+    {
+        //
+        string url = $"identity/account/login";
+        //navigation.NavigateTo(url, forceLoad: true);
+        //navigation.NavigateTo($"identity/account/login?returnUrl={Uri.EscapeDataString(navigation.Uri)}");
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        var returnUrl = navigation.ToBaseRelativePath(navigation.Uri);
+        navigation.NavigateTo($"identity/account/login?returnUrl={returnUrl}", forceLoad: true);
+    }
+}
