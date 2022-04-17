@@ -1,0 +1,68 @@
+﻿<span class="skeleton" @attributes="InputAttributes" style="@Style">
+    @if (Lines > 1)
+    {
+        <Skeleton @attributes="InputAttributes" Lines=@(Lines - 1) IsEndLine=@(Lines - 1 == 1) />
+    }
+</span>
+
+@code {
+    [Parameter]
+    public string BgColor { get; set; } = "rgb(103 103 103 / 25%)";
+    [Parameter]
+    public string Width { get; set; } = "auto";
+    [Parameter]
+    public string Height { get; set; } = "auto";
+    [Parameter]
+    public SkeletonType Type { get; set; } = SkeletonType.rect;
+    [Parameter]
+    public int Lines { get; set; } = 1;
+    [Parameter]
+    public bool IsEndLine { get; set; } = false;
+    [Parameter]
+    public string? Style { get; set; } = null;
+
+    private Dictionary<string, object> InputAttributes { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        InputAttributes = new()
+            {           
+                { "height", Height },
+                { "width", Width },
+                { "background", BgColor },
+                { "border-radius", "5px" }
+            };
+        switch (Type)
+        {
+            case SkeletonType.circle:
+                InputAttributes = new()
+                    {
+                        { "border-radius", "50%" }
+                    };
+                break;
+            case SkeletonType.text:
+                InputAttributes = new()
+                    {
+                        { "height", "auto" },
+                        { "transform", "scale(1, 0.7)" }
+                    };
+                if (Lines <= 1 && IsEndLine)
+                {
+                    Width = "50%";
+                    InputAttributes.Add("width", Width);
+                }
+                break;
+            case SkeletonType.rect:
+            default:
+                break;
+        }
+
+    }
+   
+    public enum SkeletonType
+    {
+        circle,
+        text,
+        rect
+    }
+}

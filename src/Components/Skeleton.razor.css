@@ -1,0 +1,35 @@
+﻿/*
+.skeleton {
+    line-height: inherit;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transform: none;
+}
+
+.skeleton::before {
+    content: '\\a0';
+}
+
+.skeleton::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, white, transparent);
+    opacity: 0.48;
+    animation: ContainerKeyFramesSkeletonWave 1200ms cubic-bezier(0.1, 0.6, 0.33, 0.71) 100ms infinite none;
+    content: '\\a0';
+}
+
+@keyframes ContainerKeyFramesSkeletonWave {
+    from {
+        left: -150%;
+    }
+
+    to {
+        left: 150%;
+    }
+}
+*/
