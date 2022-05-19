@@ -37,7 +37,7 @@
                             </div>
                         </BSCard>
                         <BSCard CardType="BlazorStrap.CardType.Footer">
-                            <BSButton IsBlock="true" ButtonType="BlazorStrap.ButtonType.Submit" Class="mb-4" Color="Color.Primary" Size="Size.Large">
+                            <BSButton IsBlock="true" ButtonType="BlazorStrap.ButtonType.Submit" Class="mb-4" Color="BSColor.Primary" Size="Size.Large">
                                 Entrar
                             </BSButton>
                             <div class="float-left">
@@ -63,7 +63,7 @@
 </div>
 
 @code {
-    BSForm loginForm;
+    BSForm<LoginModel> loginForm;
     LoginModel loginModel = new LoginModel();
 
     bool loginFalhou = false;
