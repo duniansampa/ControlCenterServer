@@ -7,13 +7,13 @@
 <div calss="container" id="account_container">
     <div class="row h-100 w-100 justify-content-center align-items-center">
         <div class="col col-md-7">
-            <div class="card text-center">
-                <div class="card-header">
-                    <div class="card-title display-6 text-dark">@ViewData["Title"]</div>
-                </div>
-                <div class="card-body">
-                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="card text-center">
+                    <div class="card-header">
+                        <div class="card-title display-6 text-dark">@ViewData["Title"]</div>
+                    </div>
+                    <div class="card-body">
                         <div class="input-group mb-5">
                             <span class="input-group-text" id="inputGroup-username">
                                 <i class="bi bi-envelope"></i>
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <span class="input-group-text" id="inputGroup-password">
+                            <span class="input-group-text" id="inputGroup-confirmpassword">
                                 <i class="bi bi-lock"></i>
                             </span>
                             <div class="form-floating">
@@ -44,14 +44,15 @@
                                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="card-footer text-muted">
-                    <div class="mb-3">
-                        <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+
+                    </div>
+                    <div class="card-footer text-muted">
+                        <div class="mb-3">
+                            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
